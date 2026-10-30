@@ -1,0 +1,8 @@
+# Unignore html entry points
+!index.html
+!*.html
+
+# Dependencies & System
+node_modules/
+.DS_Store
+*.log

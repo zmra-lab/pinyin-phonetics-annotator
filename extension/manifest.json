@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "ZMRA Pinyin Annotator",
+  "short_name": "ZMRA Pinyin",
+  "version": "1.0.0",
+  "description": "Smart Chinese Pinyin 4-tone ruby annotator and English IPA phonetic reader by ZMRA. Privacy-first offline linguistics.",
+  "author": "ZMRA (https://zmra.com)",
+  "homepage_url": "https://zmra.com",
+  "action": {
+    "default_title": "ZMRA Pinyin Annotator",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+ruby.zmra-pinyin-ruby rt {
+  font-size: 0.6em;
+  line-height: 1.1;
+  font-weight: 600;
+}
+ruby.zmra-pinyin-ruby rt.t1 { color: #0284c7 !important; }
+ruby.zmra-pinyin-ruby rt.t2 { color: #059669 !important; }
+ruby.zmra-pinyin-ruby rt.t3 { color: #d97706 !important; }
+ruby.zmra-pinyin-ruby rt.t4 { color: #e11d48 !important; }
+ruby.zmra-pinyin-ruby rt.t0 { color: #64748b !important; }

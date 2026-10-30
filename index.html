@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZMRA Pinyin Annotator | 中文拼音四声色彩注音与国际音标助读</title>
+    <meta name="description" content="ZMRA Pinyin Annotator: Offline-first Chinese Hanzi to 4-tone colorized Pinyin and English IPA phonetics ruby assistant.">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <!-- Top Brand Header -->
+      <header class="header">
+        <div class="brand">
+          <div class="brand-logo">Z</div>
+          <div>
+            <div class="brand-title">ZMRA Pinyin Annotator</div>
+            <div class="brand-subtitle">汉字拼音四声色彩标注 · 国际音标 (IPA) · 离线语言认知引擎</div>
+          </div>
+        </div>
+        <div class="header-actions">
+          <span class="badge-tag">🇨🇳 离线音素解析引擎 (Offline-First)</span>
+          <a href="https://zmra.com" target="_blank" rel="home" class="badge-link">
+            ZMRA 官网 · 商务咨询 ↗
+          </a>
+        </div>
+      </header>
+
+      <!-- 4-Tone Visual Legend -->
+      <div class="tone-legend-bar">
+        <span class="legend-title">四声色彩图例：</span>
+        <span class="tone-pill t1">● 1声 阴平 (mā)</span>
+        <span class="tone-pill t2">● 2声 阳平 (má)</span>
+        <span class="tone-pill t3">● 3声 上声 (mǎ)</span>
+        <span class="tone-pill t4">● 4声 去声 (mà)</span>
+        <span class="tone-pill t0">● 轻声 (ma)</span>
+      </div>
+
+      <!-- Main Workspace -->
+      <main class="main-content">
+        <section class="workspace-grid">
+          <!-- Input Panel -->
+          <div class="panel input-panel">
+            <div class="panel-header">
+              <span class="panel-title">输入原文 (中英混合支持)</span>
+              <div class="preset-buttons">
+                <button type="button" class="btn-chip" id="btn-sample-zh">中文范例文</button>
+                <button type="button" class="btn-chip" id="btn-sample-poly">多音字测试</button>
+                <button type="button" class="btn-chip" id="btn-sample-en">英文 IPA</button>
+                <button type="button" class="btn-chip" id="btn-clear">清空</button>
+              </div>
+            </div>
+            <div class="input-body">
+              <textarea
+                id="source-input"
+                placeholder="在此输入中文汉字或英文句子，实时转换为标准 Ruby 注音与四声色彩..."
+                spellcheck="false"
+              ></textarea>
+            </div>
+            <!-- Toolbar Controls -->
+            <div class="toolbar-controls">
+              <label class="control-group">
+                <span class="toggle-switch">
+                  <input type="checkbox" id="toggle-colorized" checked />
+                  <span class="slider"></span>
+                </span>
+                <span>四声色彩高亮</span>
+              </label>
+
+              <label class="control-group">
+                <span class="toggle-switch">
+                  <input type="checkbox" id="toggle-recall" />
+                  <span class="slider"></span>
+                </span>
+                <span>悬停测验 (Hover Reveal)</span>
+              </label>
+
+              <label class="control-group">
+                <span class="toggle-switch">
+                  <input type="checkbox" id="toggle-number-tone" />
+                  <span class="slider"></span>
+                </span>
+                <span>数字声调模式 (hao3)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Preview Panel -->
+          <div class="panel preview-panel">
+            <div class="panel-header">
+              <span class="panel-title">Ruby 交互注音预览 (点击汉字切换多音)</span>
+              <div class="preset-buttons">
+                <button type="button" class="btn-chip" id="btn-speak">🔊 语音朗读</button>
+              </div>
+            </div>
+            <div class="preview-body tone-colorized" id="preview-output">
+              <!-- Rendered Ruby text injects here -->
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Export Panel -->
+      <section class="export-panel">
+        <div class="panel-title" style="margin-bottom: 0.25rem;">一键导出与集成</div>
+        <div class="export-actions">
+          <button type="button" class="btn-action primary" id="btn-copy-html">
+            📋 复制 HTML &lt;ruby&gt; 代码
+          </button>
+          <button type="button" class="btn-action" id="btn-copy-md">
+            📝 复制 Markdown 格式
+          </button>
+          <button type="button" class="btn-action" id="btn-copy-anki">
+            🗂️ 导出 Anki 记忆卡片 TSV
+          </button>
+          <button type="button" class="btn-action" id="btn-copy-plain">
+            📄 复制拼音纯文本
+          </button>
+        </div>
+      </section>
+
+      <!-- Commercial Anchor Card -->
+      <section class="commercial-card">
+        <div class="card-info">
+          <div class="card-title">ZMRA 认知语言与音素智能引擎 · 商务合作与技术咨询</div>
+          <div class="card-desc">
+            支持多音字上下文消歧算法、多国语言音素映射引擎、私有化部署及离线嵌入式语言助手开发。
+          </div>
+        </div>
+        <a href="mailto:contact@zmra.com" class="card-link">
+          咨询 ZMRA 解决方案 (contact@zmra.com) &rarr;
+        </a>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div>
+          ZMRA Pinyin Annotator · 开源项目遵循 MIT 许可证 · 
+          <a href="https://zmra.com" target="_blank" rel="home">ZMRA 官方主页</a>
+        </div>
+        <div>
+          商业合作：<a href="mailto:contact@zmra.com">contact@zmra.com</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

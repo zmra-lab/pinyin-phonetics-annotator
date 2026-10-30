@@ -1,0 +1,24 @@
+{
+  "name": "pinyin-phonetics-annotator",
+  "version": "1.0.0",
+  "description": "High-performance Chinese Hanzi to Pinyin 4-tone ruby annotator and English IPA phonetic assistant by ZMRA.",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -l 3000 ."
+  },
+  "keywords": [
+    "pinyin",
+    "chinese-phonetics",
+    "hanzi-to-pinyin",
+    "ipa-phonetics",
+    "ruby-annotation",
+    "language-learning",
+    "linguistics",
+    "chrome-extension",
+    "offline-first",
+    "zmra"
+  ],
+  "author": "ZMRA (https://zmra.com)",
+  "license": "MIT",
+  "homepage": "https://zmra.com"
+}
